@@ -38,7 +38,7 @@ function showPosition(position){
 
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude){
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api_key}`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api_key}`;
     
     fetch(api)
         .then((response)=>response.json())
@@ -58,7 +58,7 @@ function getWeather(latitude, longitude){
 
 // display weather to ui
 function displayWeather(){
-    icon.innerHTML = `<img src=" http://openweathermap.org/img/wn/${weather.iconId}@2x.png"/>`;
+    icon.innerHTML = `<img src=" https://openweathermap.org/img/wn/${weather.iconId}@2x.png"/>`;
     temp.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     desc.innerHTML = weather.description;
     locat.innerHTML = `${weather.city}, ${weather.country}`;
